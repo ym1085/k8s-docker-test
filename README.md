@@ -1,2 +1,3 @@
 # k8s-docker-test
-k8s와 docker test를 위한 리포지토리 입니다.
+
+이 프로젝트는 docker, k8s을 테스트 하기 위한 리포지토리입니다.

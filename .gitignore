@@ -1,0 +1,117 @@
+###############################################################################
+# 일반적인 OS / 에디터 / 도구 무시 패턴
+###############################################################################
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# IDE / Editor 별(예: IntelliJ, Eclipse, etc.)
+.idea/
+*.iml
+*.classpath
+*.project
+*.settings/
+out/
+
+###############################################################################
+# Docker 관련 무시 패턴
+###############################################################################
+# 환경 변수 파일(예: Docker 빌드용)
+.env
+.env.*
+
+# Docker Compose override 파일
+docker-compose.override.yml
+docker-compose.*.override.yml
+
+# 빌드 산출물(이미지 빌드 시 생성되는 임시 디렉터리 등)
+build/
+dist/
+tmp/
+logs/
+*.log
+
+# (선택) Docker Volume 혹은 임시 Mount 경로
+# volume/
+# data/
+
+###############################################################################
+# Kubernetes(K8s) 관련 무시 패턴
+###############################################################################
+# kubectl이 사용하는 로컬 kubeconfig 디렉터리(개인 설정 등)
+.kube/
+
+# Kustomize나 Helm 등으로 생성되는 임시/빌드 아티팩트
+# (예: Kustomize 빌드 결과물, Helm 템플릿 생성물)
+k8s/generated/
+helm-charts-output/
+.chart-build/
+
+# (선택) 로컬 환경에서만 쓰이는 secret, config 파일 등
+*.secret.yaml
+*.local.yaml
+
+###############################################################################
+# 언어별/프레임워크별(예: Node.js, Python 등) 무시 패턴
+###############################################################################
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Java/Gradle
+*.class
+*.jar
+*.war
+*.ear
+*.rar
+*.iml
+*.log
+target/
+build/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+###############################################################################
+# 기타 필요 시 추가할 항목
+###############################################################################
+# 보안 상 민감한 파일(SSL 키, 인증서 등)은 반드시 무시 처리
+# *.key
+# *.pem
+# *.crt
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Ansible
+*.retry
+
+
+# nexus data 정보 disable
+docker/nexus/nexus-data

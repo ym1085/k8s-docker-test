@@ -1,0 +1,10 @@
+version: "3"
+services:
+  nexus:
+    image: sonatype/nexus3:latest # sonatype의 nexus3 공식 이미지
+    container_name: nexus3_repo
+    restart: always
+    volumes:
+      - "./nexus-data:/nexus-data" # 현재 dir 경로의 nexus-data 폴더에 마운트
+    ports:
+      - "8081:8081"
